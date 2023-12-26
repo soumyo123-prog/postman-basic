@@ -1,0 +1,24 @@
+[
+  {
+    "registerUsername": "a_beautiful_username",
+    "registerPassword": ""
+  },
+  {
+    "registerUsername": "a_beautiful_username",
+    "registerPassword": "a_beautiful_password",
+    "loginUsername": "a_beautiful_username",
+    "loginPassword": "a_wrong_password"
+  },
+  {
+    "registerUsername": "b_beautiful_username",
+    "registerPassword": "b_beautiful_password",
+    "loginUsername": "b_beautiful_username",
+    "loginPassword": "b_beautiful_password"
+  },
+  {
+    "registerUsername": "c_beautiful_username",
+    "registerPassword": "c_beautiful_password",
+    "loginUsername": "c_beautiful_username",
+    "loginPassword": "c_beautiful_password"
+  }
+]

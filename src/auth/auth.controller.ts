@@ -1,4 +1,11 @@
-import { Body, Controller, Post, UseGuards, Request } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Post,
+  UseGuards,
+  Request,
+  Delete,
+} from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
 
@@ -23,7 +30,7 @@ export class AuthController {
   }
 
   @UseGuards(AuthGuard)
-  @Post('remove')
+  @Delete('remove')
   async remove(@Request() req) {
     return await this.authService.remove(req.user.username);
   }

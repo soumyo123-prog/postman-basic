@@ -18,6 +18,13 @@ export class AuthService {
   }
 
   async signUp(username: string, password: string) {
+    if (!username || !password) {
+      throw new HttpException(
+        'Please enter a valid username and password',
+        HttpStatus.BAD_REQUEST,
+      );
+    }
+
     const existingUser = this.userService.findOne(username);
     if (existingUser) {
       throw new HttpException(
@@ -45,7 +52,7 @@ export class AuthService {
     if (user.password !== password) {
       throw new HttpException(
         `Please enter correct password`,
-        HttpStatus.FORBIDDEN,
+        HttpStatus.BAD_REQUEST,
       );
     }
 
